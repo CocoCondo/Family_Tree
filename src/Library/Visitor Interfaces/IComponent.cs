@@ -4,7 +4,7 @@ using System;
 using System.Text;
 namespace Library;
 
-public interface IComponent
+public interface IComponent<T>
 {
-    void Accept(IVisitor visitor);
+    void Accept(IVisitor<T> visitor);
 }

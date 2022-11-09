@@ -4,7 +4,7 @@ using System;
 using System.Text;
 namespace Library;
 
-public interface IVisitor
+public interface IVisitor<T>
 {
-    public abstract void Visit(Node<Persona> node);
+    public void Visit(Node<T> node);
 }

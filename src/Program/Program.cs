@@ -7,14 +7,32 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Node<Persona> n1 = new Node<Persona>(1, "coco", 21);
-            Node<Persona> n2 = new Node<Persona>(2, "julio", 76);
-            Node<Persona> n3 = new Node<Persona>(3, "roberto", 41);
-            Node<Persona> n4 = new Node<Persona>(4, "maria", 23);
-            Node<Persona> n5 = new Node<Persona>(5, "julian", 54);
-            Node<Persona> n6 = new Node<Persona>(6, "huber", 75);
-            Node<Persona> n7 = new Node<Persona>(7, "pepe julian onzima", 11);
-            Node<Persona> n8 = new Node<Persona>(8, "ultimo", 11);
+            Persona p1 = new Persona("coco", 21);
+            Persona p2 = new Persona("julio", 76);
+            Persona p3 = new Persona("roberto", 41);
+            Persona p4 = new Persona("maria", 23);
+            Persona p5 = new Persona("julian", 54);
+            Persona p6 = new Persona("huber", 75);
+            Persona p7 = new Persona("pepe julian onzima", 11);
+            Persona p8 = new Persona("ultimo", 11);
+
+            Node<Persona> n1 = new Node<Persona>();
+            Node<Persona> n2 = new Node<Persona>();
+            Node<Persona> n3 = new Node<Persona>();
+            Node<Persona> n4 = new Node<Persona>();
+            Node<Persona> n5 = new Node<Persona>();
+            Node<Persona> n6 = new Node<Persona>();
+            Node<Persona> n7 = new Node<Persona>();
+            Node<Persona> n8 = new Node<Persona>();
+
+            n1.Value = p1;
+            n2.Value = p2;
+            n3.Value = p3;
+            n4.Value = p4;
+            n5.Value = p5;
+            n6.Value = p6;
+            n7.Value = p7;
+            n8.Value = p8;
 
             n1.AddChildren(n2);
             n1.AddChildren(n3);

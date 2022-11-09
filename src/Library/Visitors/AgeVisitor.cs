@@ -4,26 +4,19 @@ using System;
 using System.Text;
 namespace Library;
 
-public class AgeVisitor : IVisitor
+public class AgeVisitor : IVisitor<Persona>
 {
     int ValorSuma {get; set;}
-    public int Suma {get; set;}
     public void Visit(Node<Persona> node)
     {
-        this.ValorSuma += node.GetAge();
-        //Console.WriteLine(node.GetName());
+        this.ValorSuma += node.Value.Edad;
         foreach(Node<Persona> n in node.GetList())
         {
             n.Accept(this);            
         }
     }
-    public int GetTotalAge()
-    {
-        this.Suma = this.ValorSuma;
-        return this.Suma;
-    }
     public override string ToString()
     {
-        return $"La suma total de las edades de la familia es: {this.GetTotalAge()}.";
+        return $"La suma total de las edades de la familia es: {this.ValorSuma}.";
     }
 }
